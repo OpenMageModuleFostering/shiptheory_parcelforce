@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Shiptheory_Parcelforce>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Shiptheory_Parcelforce>
+    </modules>
+</config>
