@@ -3,7 +3,7 @@
     "type": "magento-module",
     "license": "Commercial",
     "homepage": "",
-    "description": "Parcelforce expressLink API Integration from Shiptheory",
+    "description": "Parcelforce Integration from Shiptheory",
     "authors": [
     {
         "name": "Shiptheory",

@@ -60,6 +60,11 @@ class Shiptheory_Shippinglabels_Model_Order_Observer
 		}
 	
 		Mage::register('sales_order_save_commit_after_executed', true);*/
+
+	    if(!Mage::getStoreConfig('shippinglabels/misc/enabled')){
+		return;
+	    }
+
 		$order_id = $order->getId();
 		$this->_orderId = Mage::getModel('shippinglabels/history')->loadArchive($order_id);
 		
@@ -67,6 +72,7 @@ class Shiptheory_Shippinglabels_Model_Order_Observer
 		$pending_order = Mage::getModel('shippinglabels/history');
 		if($this->_orderId){
 			$pending_order->setId($this->_orderId);
+			return; //overwrites the above line, will be used for retry in a future version
 		}
 		
 		try{
